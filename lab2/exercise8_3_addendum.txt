@@ -1,0 +1,3 @@
+Run your above code with testcase1.txt. What would you see and what would be your explaination for the output?
+
+I would see a considerably larger number. This is because my code sums the amount of elements in the file, and adapts to the increased numbers present in testcase1.txt as opposed to the lower amount and values present in testcase0.txt. There is also a noticeable wait for the program to finish due to the sheer amount of data the processor is handling.

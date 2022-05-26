@@ -1,0 +1,21 @@
+Lab 4 Report - erikvs
+
+EXERCISE 1
+
+message.h allows us to use print_message() without defining it.
+lab4.c has the main call to run print message.
+message.c contains an array with the arguments the functionality of void print_message().
+
+Srand() generates a random seed based on the time which is used by rand() to generate a random number which again is assigned as the index for a given run of the program. The program prints the message corresponding to the random index generated.
+
+EXERCISE 2
+
+Line 16 corrected to 30 - 31 is outside the memory buffer of 4gb and gives overflow, anything between 2 and 30 is inside and will work.
+
+malloc() takes a size parameter size_t as input. 1<<31 is a valid int, it is -2147483648. Size_t however does not accept negative numbers, and will convert the int to its positive counterpart 2147483648. The highest value an int can have is 2147483647. Since the value input in malloc() is bigger than the maximum positive value an int can have it overflows.
+
+EXERCISE 3
+
+Line 29 i<=length is iterating 11 times, which means its generating 11 indexes for an array which is defined to hold 10. This overflows the array and causes the program to crash.
+Line 22 Initializing the randomization of rand() to actually give a random result based off time instead of input. According to the C documentation this is the correct way to do this.
+I moved -1 from line 32 to line 25, cause I dont like that the program is telling me I entered more characters than I did cause its counting an invisible newline.

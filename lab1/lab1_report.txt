@@ -1,0 +1,55 @@
+lab1 erikvs
+
+A lot of information for this report has been aquired through the GNU manual @ https://www.gnu.org/software/coreutils/manual/html_node/
+
+❗️2.1 
+
+➡️ cat file1 file2 file3 | grep cat
+
+cat - short for concatenate (link together) links files and prints content in terminal.
+The vertical line is called a pipe. The pipe links output from one command (in this case cat) to the input of another command (in this case grep).
+grep - searches for patterns and prints matches, pattern is typically quoted when gred is used.
+
+The command links the files together, pipes the result to grep and grep prints the content of the file where the word cat is present.
+
+➡️ who | wc -l > file1.txt
+
+who - shows who is logged on
+wc - word count - prints the count for newlines, words and bytes for each file
+-l is an option for wc which specifies only printing of the amount of new lines 
+> redirects the output from a command to another source like a file.
+
+The command gets how many people are logged on to my computer and pipes that output to wc -l which prints the amount of lines into file1.txt. Since there is 1 person logged on to my computer, one line is printed to console through the single command who. This one line is represented by the number 1 in file1.txt
+
+➡️ sort < file1.txt > file2.txt
+
+sort - sorts the lines of text files, alphabetically as standard 
+< redicts input from another source
+
+The command sorts the lines of file1.txt and prints the sorted order in file2.txt
+
+➡️ ps | wc -l
+
+ps - prints a snapshot of the current processes running in terminal
+
+The command gets how many processes are running, pipes the output to wc -l which prints a numeric value to console representing the number of processes, since each process is one line in terminal.
+
+❗️2.2
+
+ The command rm with the option -r and a directory defined would delete a directory and its content: rm -r [DIRECTORY]
+ 
+ Recursively can be understood as repeat removal of content in this understanding.
+ 
+❗️2.3 
+1.
+➡️ rmdir - removes empty directories
+➡️ mv - moves a file in the understanding that it is renamed
+➡️ cp - copies file(s) and directorie(s) to a given destination
+➡️ less - less [FILE] launches an in terminal program which lets you navigate in a document
+
+push and pop are actions used with storage in stack. The concept of stack is similar to a stack of plates where the first plate added to the stack is at the bottom of the stack and subsequent plates are added on top. Push adds to the top of the stack, pop removes from the top of the stack.
+➡️ pushd - push directory, stores currect directory in a stack in memory for easy access.
+➡️ popd - pop directory, gets the last pushed directory of the stack in memory. 
+
+2.
+➡️ To learn more about the command ls I would type man ls into the terminal.
